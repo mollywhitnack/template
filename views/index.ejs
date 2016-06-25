@@ -8,6 +8,9 @@
 
   <script src="/bower_components/angular/angular.js"></script>
 
+  <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+
   <script src="/js/module.js"></script>
   <script src="/js/controllers.js"></script>
   <script src="/js/services.js"></script>
@@ -15,7 +18,25 @@
 </head>
 <body ng-app = 'myApp' ng-controller = 'mainCtrl'>
 
-<h1><%= title %></h1>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+  <div class="gameSquares">
+    <button type="button" class="btn btn-warning game1" ui-sref ="game1">Game 1</button>
+    <button type="button" class="btn btn-info game2" ui-sref ="game2">Game 2</button>
+    <button type="button" class="btn btn-danger game3" ui-sref ="game3">Game 3</button>
+    <button type="button" class="btn btn-success game4" ui-sref ="game4">Game 4</button>
+  </div>
+  </div>
+</nav>
+
+<div class="container">
+  
+
+<hr>
+<ui-view></ui-view>
+
+</div>
+
   
 </body>
 </html>
